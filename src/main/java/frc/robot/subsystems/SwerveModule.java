@@ -41,17 +41,17 @@ public class SwerveModule {
     this.moduleNumber = moduleNumber;
     angleOffset = moduleConstants.angleOffset;
 
-    /* Angle Encoder Config */
+    // Angle Encoder Config
     angleEncoder = new CANCoder(moduleConstants.cancoderID);
     configAngleEncoder();
 
-    /* Angle Motor Config */
+    // Angle Motor Config
     angleMotor = new CANSparkMax(moduleConstants.angleMotorID, MotorType.kBrushless);
     integratedAngleEncoder = angleMotor.getEncoder();
     angleController = angleMotor.getPIDController();
     configAngleMotor();
 
-    /* Drive Motor Config */
+    // Drive Motor Config 
     driveMotor = new CANSparkMax(moduleConstants.driveMotorID, MotorType.kBrushless);
     driveEncoder = driveMotor.getEncoder();
     driveController = driveMotor.getPIDController();
