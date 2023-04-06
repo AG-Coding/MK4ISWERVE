@@ -1,5 +1,6 @@
 package frc.robot;
 
+import com.pathplanner.lib.PathConstraints;
 import com.revrobotics.CANSparkMax.IdleMode;
 import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.geometry.Translation2d;
@@ -10,7 +11,7 @@ import frc.lib.Configurations.SwerveModuleConstants;
 
 public final class Constants {
 
-  public static final class Swerve {
+  public static final class SwerveConstants {
     public static final double stickDeadband = 0.07;
 
     public static final int pigeonID = 6;
@@ -132,9 +133,16 @@ public final class Constants {
     public static final double kPYController = 1;
     public static final double kPThetaController = 1;
 
+    public static final double kMaxLinearSpeed = 1; // Change this
+
     // Constraint for the motion profilied robot angle controller
     public static final TrapezoidProfile.Constraints kThetaControllerConstraints =
         new TrapezoidProfile.Constraints(
             kMaxAngularSpeedRadiansPerSecond, kMaxAngularSpeedRadiansPerSecondSquared);
+
+    public static final PathConstraints kSlowPathConstraints = new PathConstraints(1, 1);  
+    public static final PathConstraints kMediumPathConstraints = new PathConstraints(2, 2);
+    public static final PathConstraints kFastPathConstraints = new PathConstraints(2, 2);        
+    public static final PathConstraints kTooFastPathConstraints = new PathConstraints(2, 2);                
   }
 }
