@@ -1,4 +1,4 @@
-# This is the full MK4I Swerve Code with L2 Gear Ratios
+# This is the full MK4I Swerve Code
 
   Parts Needed:
     - 4 Modules MK4I
