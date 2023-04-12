@@ -46,7 +46,7 @@ public final class Constants {
     /* Angle Motor PID Values */
     public static final double angleKP = 0.01; // tune this value
     public static final double angleKI = 0.0;
-    public static final double angleKD = 0.0;
+    public static final double angleKD = 0.0; // tune this value
     public static final double angleKFF = 0.0;
 
     /* Drive Motor PID Values */
@@ -67,7 +67,7 @@ public final class Constants {
     public static final double angleConversionFactor = 360.0 / angleGearRatio;
 
     /* Swerve Profiling Values */
-    public static final double maxSpeed = 4.5; // meters per second
+    public static final double maxSpeed = 4.5; // meters per second. Change this
     public static final double maxAngularVelocity = 11.5;
 
     /* Neutral Modes */
@@ -140,9 +140,9 @@ public final class Constants {
         new TrapezoidProfile.Constraints(
             kMaxAngularSpeedRadiansPerSecond, kMaxAngularSpeedRadiansPerSecondSquared);
 
-    public static final PathConstraints kSlowPathConstraints = new PathConstraints(1, 1);  
-    public static final PathConstraints kMediumPathConstraints = new PathConstraints(2, 2);
-    public static final PathConstraints kFastPathConstraints = new PathConstraints(2, 2);        
-    public static final PathConstraints kTooFastPathConstraints = new PathConstraints(2, 2);                
+    public static final PathConstraints kSlowPathConstraints = new PathConstraints(2, 2);  
+    public static final PathConstraints kMediumPathConstraints = new PathConstraints(3, 3);
+    public static final PathConstraints kFastPathConstraints = new PathConstraints(4, 4);        
+    public static final PathConstraints kTooFastPathConstraints = new PathConstraints(5, 5);                
   }
 }
