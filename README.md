@@ -1,4 +1,4 @@
-# This is the full MK4I Swerve Code
+# MK4I Swerve Code
 
   Parts Needed:
     - 4 Modules MK4I
