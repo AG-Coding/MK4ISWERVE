@@ -24,7 +24,7 @@
     -tune path controller P(D?) values
 
 
-Credit to Sushi Squad's (7461) Swerve Library and Jack in the Bot (2910) Swerve Library.
+Credit to (7461, 2910, and 364) Swerve Library
 
 
 
